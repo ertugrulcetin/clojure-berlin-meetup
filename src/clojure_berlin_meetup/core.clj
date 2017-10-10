@@ -3,7 +3,7 @@
 
 
 (def course-manifest (manifest :title "Clojure Berlin Meetup"
-                               :report-bug-email-or-link "https://github.com/clojurecademy/4Clojure/issues"
+                               :report-bug-email-or-link "https://github.com/ertugrulcetin/clojure-berlin-meetup/issues"
                                :name 'clojure-berlin-meetup
                                :skip? true
                                :short-description "Course for Cool Clojure Berlin Developers"
@@ -57,14 +57,5 @@
                                                                        (testing
                                                                          (is (= (my-add 1 2) 3) :default :advanced)
                                                                          (is (= (my-add 0 0) 0) :default :advanced)
-                                                                         (is (= (my-add 55 5) 60) :default :advanced)))
-
-                                                      (sub-instruction 'sub-ins-subtraction
-                                                                       (text
-                                                                         (p "Please write a function called " (hi "my-sub")
-                                                                            " which takes 2 arguments and subtracts those arguments."))
-                                                                       (testing
-                                                                         (is (= (my-subtraction 1 2) -1) :default :advanced)
-                                                                         (is (= (my-subtraction 2 2) 0) :default :advanced)
-                                                                         (is (= (my-subtraction 3 1) 2) :default :advanced))))
+                                                                         (is (= (my-add 55 5) 60) :default :advanced))))
                                          'math-operations)))))
