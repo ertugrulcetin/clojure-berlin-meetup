@@ -1,5 +1,6 @@
 (ns clojure-berlin-meetup.core
-  (:require [clojurecademy.dsl.core :refer :all]))
+  (:require [clojurecademy.dsl.core :refer :all]
+            [clojurecademy.dsl.test :refer :all]))
 
 
 (def course-manifest (manifest :title "Clojure Berlin Meetup"
@@ -59,3 +60,11 @@
                                                                          (is (= (my-add 0 0) 0) :default :advanced)
                                                                          (is (= (my-add 55 5) 60) :default :advanced))))
                                          'math-operations)))))
+
+
+(defcoursetest test-addition
+               [ch-intro-clojure sub-ch-clojure-basics subj-lets-do-some-math ins-math-operations sub-ins-addition]
+
+               (defn my-add
+                 [x y]
+                 (+ x y)))
